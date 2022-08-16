@@ -1,12 +1,12 @@
 import { Layout } from "components";
-import styles from "styles/Home.module.css";
+import ComponentHome from "components/Pages/Home";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <Layout pageTitle="Home Page">
-        <h1 className={styles.title}>Welcome Salim</h1>
-      </Layout>
-    </>
+    <Layout pageTitle="Home Page">
+      <ComponentHome />
+    </Layout>
   );
-}
+};
+
+export default Home;

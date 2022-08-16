@@ -1,0 +1,182 @@
+@import "base/colors.scss";
+
+.header {
+    max-width: 100vw;
+    padding: 20px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    
+
+    .navbar-nav .nav-item .nav-link {
+        font-family: 'DM Mono' !important;
+        font-weight: 500 !important;
+        font-size: 20px;
+        color: $blackfont;
+        margin: 0px 10px 0px 10px;
+        cursor: pointer;
+    }
+    .navbar-nav .nav-item .nav-link:hover{
+            color: $primary !important;
+    }
+    .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+        font-family: 'DM Mono' !important;
+        color: $primary !important;
+        font-weight: 500 !important;
+        font-size: 20px;
+        border-bottom: 3px $secondary solid;
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+.footer {
+    padding: 50px 0px 0px 0px;
+    background: $primary;
+
+    background-image: url("https://swg.co.id/images/bg-image/row-bgimage-8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h2 {
+        font-family: "DM Mono";
+        font-weight: 300;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+
+    h6 {
+        font-family: "DM Mono";
+        font-weight: 300;
+        font-size: 15px;
+        color: #FFFFFF;
+    }
+
+    .text-copyright-salim {
+        font-family: "DM Mono";
+        font-style: italic;
+        font-weight: 300;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+
+    ul {
+        font-family: "DM Mono";
+        font-weight: 300;
+        font-size: 15px;
+        color: #FFFFFF;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    li a {
+        color: inherit;
+        font-style: inherit;
+        text-decoration: inherit;
+    }
+    li a:hover {
+        color: $secondary;
+        font-weight: 400;
+    }
+    .bulet-white {
+        width: 10px;
+        height: 10px;
+        margin-left: -29px;
+        padding: 3px;
+        background-color: #ffffff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        border-radius: 100px;
+        position: absolute;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .copyright {
+        font-family: DM Mono;
+        background: $secondary;
+        padding: 10px 0px 10px 0px;
+        margin-top: 50px;
+        justify-content: center;
+        display: flex;
+        color: white;
+    }
+
+}
+
+.feedback {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 99;
+
+    .card-feedback {
+        font-family: 'DM Mono';
+        // font-weight: 300;
+        font-size: 12px;
+        letter-spacing: 1px;
+        background: #59CE8F;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px 10px 0px 0px;
+        margin-right: -87px;
+        transform: rotate(-90deg);
+    }
+    .card-feedback:hover {
+        box-shadow: -4px 8px 15px 0px rgba(167, 167, 167, 0.25);
+        cursor: pointer;
+        background-color: #3FA796;
+    }
+}
+
+.navbar-brand {
+    cursor: pointer;
+}
+
+.nav-tabs .nav-item .nav-link {
+    background-color: #FE7E6D !important;
+    border: 5px #FE7E6D solid !important;
+    color: #FFFFFF !important;
+    margin: 0px 10px 0px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    background-color: #2F3A8F !important;
+    border: 5px #FE7E6D solid;
+    color: #FFFFFF;
+}
+
+.bulet {
+    width: 30px;
+    height: 30px;
+    margin-left: -49px;
+    padding: 3px;
+    background-color: #2F3A8F;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    position: absolute;
+    text-align: center;
+}
+
+.btn-switch-darkmode {
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: $snow;
+    text-align: center;
+    border: 0.8px solid $black;
+    border-radius: 10px !important;
+
+    p {
+        font-size: 8px !important;
+        margin-bottom: 0px;
+    }
+
+    
+}
+.btn-switch-darkmode:hover{
+    background-color: $snow;
+}

@@ -1,5 +1,4 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
+import { Header, Footer, Ballon } from "components";
 import Head from "next/head";
 import React from "react";
 
@@ -7,10 +6,11 @@ const Layout = (props) => {
   return (
     <>
       <Head>
-        <title>{`TodoApp - ${props?.pageTitle}`}</title>
+        <title>{`${props?.pageTitle} - Salimseal`}</title>
       </Head>
       <div>
-        <Header />
+        <Ballon />
+        <Header {...props} />
         <div>{props.children}</div>
         <Footer />
       </div>

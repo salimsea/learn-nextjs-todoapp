@@ -1,0 +1,19 @@
+@import "../base/colors.scss";
+
+.btn-costum-primary-outline {
+  font-family: 'DM Mono';
+  background: $primary;
+  border: 5px solid $secondary;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+
+  :hover {
+    font-family: 'DM Mono';
+    background: #293379;
+    border: 5px solid #FE7E6D;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
+  }
+}
