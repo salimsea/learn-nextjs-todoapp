@@ -1,3 +1,4 @@
+@import "helpers/responsive.scss";
 @import "base/colors.scss";
 
 .header {
@@ -6,6 +7,13 @@
     position: fixed;
     width: 100%;
     z-index: 99;
+
+    .toggle-menu-mobile {
+        color: $blackfont;
+    }
+    .navbar-toggler {
+        border: none !important;
+    }
     
 
     .navbar-nav .nav-item .nav-link {
@@ -143,7 +151,7 @@
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    background-color: #2F3A8F !important;
+    background-color: $primary !important;
     border: 5px #FE7E6D solid;
     color: #FFFFFF;
 }
@@ -153,7 +161,7 @@
     height: 30px;
     margin-left: -49px;
     padding: 3px;
-    background-color: #2F3A8F;
+    background-color: $primary;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     border-radius: 100px;
     position: absolute;
@@ -179,4 +187,13 @@
 }
 .btn-switch-darkmode:hover{
     background-color: $snow;
+}
+
+
+@include screenLG() {
+    .header {
+        .btn-costum-primary-outline {
+            margin-left: 0px !important;
+        }
+    }
 }

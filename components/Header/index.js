@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { FaMoon, FaPhoneAlt, FaSun } from "react-icons/fa";
+import { FaListAlt, FaMoon, FaPhoneAlt, FaSun } from "react-icons/fa";
+import { IoListOutline } from "react-icons/io5";
 import {
   Navbar,
   NavbarBrand,
@@ -15,24 +16,26 @@ import {
   Button,
 } from "reactstrap";
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [darkTheme, setDarkTheme] = useState(undefined);
+  var sesiDark = "undefined";
+  if (typeof window !== "undefined")
+    sesiDark = `${localStorage.getItem("theme")}`;
+  const [darkTheme, setDarkTheme] = useState(sesiDark);
   const [clientWindowHeight, setClientWindowHeight] = useState("");
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
 
+  ///ANIMATE SCROLLBAR
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY);
   };
-
   useEffect(() => {
     let backgroundTransparacyVar = clientWindowHeight / 600;
     if (backgroundTransparacyVar < 1) {
@@ -44,31 +47,20 @@ const Header = (props) => {
     }
   }, [clientWindowHeight]);
 
-  const handleToggle = (event) => {
-    setDarkTheme(event.target.checked);
-  };
-
+  ///DARKMODE CHANGED
   useEffect(() => {
-    if (darkTheme !== undefined) {
+    if (darkTheme !== "undefined") {
       if (darkTheme) {
-        // Set value of  darkmode to dark
         document.documentElement.setAttribute("data-theme", "dark");
         window.localStorage.setItem("theme", "dark");
       } else {
-        // Set value of  darkmode to light
         document.documentElement.removeAttribute("data-theme", "light");
         window.localStorage.setItem("theme", "light");
       }
     }
   }, [darkTheme]);
-
   useEffect(() => {
-    const root = window.document.documentElement;
-    const initialColorValue = root.style.getPropertyValue(
-      "--initial-color-mode"
-    );
-    // Set initial darkmode to light
-    setDarkTheme(initialColorValue === "dark");
+    setDarkTheme(sesiDark === "dark");
   }, []);
 
   return (
@@ -79,8 +71,8 @@ const Header = (props) => {
       className="header"
       style={{
         background: darkTheme
-          ? `rgba(62, 62, 62, ${backgroundTransparacy})`
-          : `rgba(255, 255, 255, ${backgroundTransparacy})`,
+          ? `rgba(62, 62, 62, ${isOpen ? "62" : backgroundTransparacy})`
+          : `rgba(255, 255, 255, ${isOpen ? "255" : backgroundTransparacy})`,
         padding: `${padding}px 0px`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
       }}
@@ -96,7 +88,10 @@ const Header = (props) => {
           />
         </Link>
       </NavbarBrand>
-      <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+      <NavbarToggler onClick={() => setIsOpen(!isOpen)}>
+        <IoListOutline className="toggle-menu-mobile" size={30} />
+      </NavbarToggler>
+
       <Collapse isOpen={isOpen} navbar>
         <MyNav />
         <Button
@@ -109,18 +104,6 @@ const Header = (props) => {
         >
           <FaPhoneAlt color="#fff" /> CONTACT ME
         </Button>
-        {/* {darkTheme !== undefined && (
-          <form action="#">
-            <label className="switch">
-              <input
-                type="checkbox"
-                checked={darkTheme}
-                onChange={handleToggle}
-              />
-              <span className="slider"></span>
-            </label>
-          </form>
-        )} */}
         <button
           className="btn btn-switch-darkmode"
           onClick={() => setDarkTheme(!darkTheme)}

@@ -1,12 +1,10 @@
 import { Layout } from "components";
-import React from "react";
+import ComponentPortfolio from "components/Pages/Portfolio";
 
 const Portfolio = () => {
   return (
     <Layout pageTitle="Portfolio Page">
-      <center>
-        <p>cooming soon</p>
-      </center>
+      <ComponentPortfolio />
     </Layout>
   );
 };

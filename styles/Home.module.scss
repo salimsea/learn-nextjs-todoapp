@@ -39,9 +39,6 @@
   margin-bottom: 100px;
   padding-top: 50px;
 
-  .card-profile {
-    padding-right: 25px;
-  }
 
   .profile-creator {
     padding: 25px 30px 25px 30px;
@@ -60,8 +57,6 @@
     }
   }
 
- 
-
   h4 {
     font-family: 'Poppins';
     font-style: normal;
@@ -76,16 +71,27 @@
     font-size: 15px;
     color: #EEEEF3;
     cursor: pointer;
+
+    &img, svg:hover {
+      color: $primary !important;
+      transition: 0.5s;
+    }
   }
 
   .card-description {
     margin-top: 25px;
   }
 
+
+  .card-profile {
+    p {
+      text-align: justify;
+    }
+  }
+
   p {
     font-weight: 400;
     font-size: 20px;
-    // text-align: justify;
   }
 
   .card-academic-experience {
@@ -182,4 +188,44 @@
 }
 
 
+@include screenLG() {
+
+  .hero {
+    text-align: center;
+
+    h1 {
+      font-size: 50px;
+      margin-left: inherit;
+      line-height: inherit;
+    }
+    span {
+      font-size: 50px;
+      line-height: inherit;
+    }
+    p {
+      font-size: 25px;
+      margin-top: 20px;
+    }
+  }
+
+  .description {
+    h4 {
+      margin-top: 15px;
+    }
+   
+    .tabcontent-academic-experience p {
+      font-size: 15px;
+    }
+    .card-profile {
+      p {
+        padding: 0px 10px;
+        text-align: inherit;
+      font-size: 15px;
+      }
+    }
+    
+  }
+
+
+}
 

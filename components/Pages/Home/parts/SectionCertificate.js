@@ -25,7 +25,7 @@ const SectionCertificate = ({ styles }) => {
   return (
     <section className={styles["certificate"]}>
       <div className="container">
-        <h3 data-aos="fade-right">Certificate</h3>
+        <h3 data-aos="fade-right">Certificates</h3>
         <div className="mt-5">
           <Slider
             slidesPerRow={3}

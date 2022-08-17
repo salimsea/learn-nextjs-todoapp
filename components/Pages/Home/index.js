@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHero from "./parts/SectionHero";
 import SectionDescription from "./parts/SectionDescription";
 import SectionProject from "./parts/SectionProject";

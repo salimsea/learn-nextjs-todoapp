@@ -1,28 +1,10 @@
 import React, { useState } from "react";
 import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
-import {
-  LogoCi,
-  LogoCsharp,
-  LogoHtml5,
-  LogoJquery,
-  LogoReact,
-  ProjectDummy1,
-  ProjectDummy2,
-  ProjectDummy8,
-  SertifikatDicoding,
-  SertifikatGoogleAnalisAkademi,
-  SertifikatGoogleAnalisBeginner,
-  SertifikatGoogleDigitalGarage,
-  SertifikatPinjul,
-  SertifikatEBsiNetwork,
-  UserProfileDummy,
-  ProjectDummy14,
-} from "assets";
+import { UserProfileDummy } from "assets";
 import Image from "next/image";
-import Slider from "react-slick";
-import styles from "styles/Home.module.scss";
 import {
   FaBehanceSquare,
+  FaArrowRight,
   FaDribbble,
   FaFacebook,
   FaGithub,
@@ -160,21 +142,27 @@ const SectionDescription = ({ styles }) => {
                   <TabPane tabId="1">
                     <ul>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           2019 : (Dicoding) Course ID CAMP, Making applications
                           using JAVA
                         </p>
                       </li>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           2019 : (YouTube) Mentor Prawito Hudoro, Gojek
                           application clone using React Native
                         </p>
                       </li>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           2019 - 2020 : (BuildWithAngga) Mentor Prawito Hudoro,
                           Create a My Doctor mobile application, using React
@@ -182,14 +170,18 @@ const SectionDescription = ({ styles }) => {
                         </p>
                       </li>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           2020 : (YouTube) Mentor Prawito Hudoro, Made web
                           application using REACT JS
                         </p>
                       </li>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           2021 - 2022 : (BuildWithAngga) Mr. Angga's mentor,
                           slicing / Creating a web front-end with the follow
@@ -201,7 +193,9 @@ const SectionDescription = ({ styles }) => {
                   <TabPane tabId="2">
                     <ul>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           PT Sawerigading Multi Kreasi <br />
                           <small>
@@ -214,7 +208,9 @@ const SectionDescription = ({ styles }) => {
                         </p>
                       </li>
                       <li>
-                        <div className="bulet"></div>
+                        <div className="bulet">
+                          <FaArrowRight color="#FFFFFF" size={15} />
+                        </div>
                         <p>
                           PT Digital Dropship Indonesia <br />
                           <small>
