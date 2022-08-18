@@ -20,6 +20,22 @@
   color: white;
   border-radius: 20px;
   font-size: 11px;
-  font-family: DM Mono;
+  font-family: 'DM Mono';
+  border: none;
+}
+
+.btn-costum-secondary {
+  font-family: 'DM Mono';
+  background: $secondary !important;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-costum-secondary:hover {
+  font-family: 'DM Mono';
+  background: $secondary !important;
+  color: white;
+  border-radius: 20px;
   border: none;
 }

@@ -189,6 +189,20 @@
     background-color: $snow;
 }
 
+.progress-bar {
+    background-color: $secondary;
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+}
+
+.modal-content {
+    border-radius: 20px !important;
+    background-color: $snow !important;
+}
+
 
 @include screenLG() {
     .header {

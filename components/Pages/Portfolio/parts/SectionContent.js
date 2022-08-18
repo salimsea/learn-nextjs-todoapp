@@ -21,6 +21,7 @@ import {
   ProjectDummy9,
 } from "assets";
 import Image from "next/image";
+import { FcAndroidOs, FcGlobe } from "react-icons/fc";
 import styles from "styles/Portfolio.module.scss";
 
 const jsonProduct = [
@@ -50,7 +51,7 @@ const jsonProduct = [
   },
   {
     image: ProjectDummy3,
-    type: "Web Apps",
+    type: "Mobile Apps",
     title: "MAPS DIRECTION",
     description:
       "This is a saluler application to find distances with a map, this is also my learning application, you can see it here: https://play.google.com/store/apps/details?id=com.maps.direction",
@@ -158,22 +159,46 @@ const SectionContent = () => {
         </div>
       </section>
       <Modal centered size="xl" isOpen={modal} toggle={showModal}>
-        <ModalBody>
-          <div className="row card-detail">
+        <ModalBody className={styles["preview"]}>
+          <div className={`row ${styles["card-detail"]}`}>
             <div className="col-md-7 d-flex align-items-center justify-content-center">
-              <div className="img-card">
-                <img src={dataModal?.image} className="img-fluid" width={600} />
+              <div className={styles["img-card"]}>
+                <Image
+                  width={500}
+                  height={300}
+                  src={dataModal?.image}
+                  className={styles["img-apps"]}
+                />
               </div>
             </div>
             <div className="col-md-5">
               <div className="py-3">
-                <span className="text-platform">{dataModal?.type}</span>
+                <span className={styles["text-platform"]}>
+                  {dataModal?.type === "Mobile Apps" ? (
+                    <FcAndroidOs
+                      size={20}
+                      style={{ marginTop: -5, marginRight: 5 }}
+                    />
+                  ) : (
+                    <FcGlobe
+                      size={20}
+                      style={{ marginTop: -5, marginRight: 5 }}
+                    />
+                  )}
+                  {dataModal?.type}
+                </span>
                 <h1>{dataModal?.title}</h1>
-                <span className="text-stack">Use : </span>
+                <span className={styles["text-stack"]}>Use : </span>
                 <div className="mt-2">
                   {dataModal?.tech.map((v, i) => {
                     return (
-                      <img key={i} src={v} className="img-fluid" width={60} />
+                      <Image
+                        key={i}
+                        width={60}
+                        height={60}
+                        src={v}
+                        className={styles["img-stack"]}
+                      />
                     );
                   })}
                 </div>
@@ -221,7 +246,17 @@ const ItemProduct = ({ image, type, title, onModal }) => {
         />
         <div className={`row ${styles["bg-primary"]} py-3 mx-0 px-2`}>
           <div className="col-md-8 text-left">
-            <span>{type}</span>
+            <span>
+              {type === "Mobile Apps" ? (
+                <FcAndroidOs
+                  size={15}
+                  style={{ marginTop: -5, marginRight: 5 }}
+                />
+              ) : (
+                <FcGlobe size={15} style={{ marginTop: -5, marginRight: 5 }} />
+              )}
+              {type}
+            </span>
             <h3>{title}</h3>
           </div>
           <div className="col-md-4 align-self-center text-end">
