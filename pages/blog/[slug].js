@@ -23,7 +23,7 @@ const Detail = (data) => {
   return (
     <Layout
       pageTitle={`Detail Blog : ${data.blog.item?.title || "loading"} `}
-      pageDescription={`Salimsea Blog : ${data.blog.item?.title} - ${data.blog.item?.postContentText}`}
+      pageDescription={`${data.blog.item?.postContentText}`}
     >
       <ComponentBlogDetail slug={slug} />
     </Layout>

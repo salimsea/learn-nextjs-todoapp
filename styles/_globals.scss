@@ -111,13 +111,13 @@
 
 }
 
-.feedback {
+.ballon {
     position: fixed;
     right: 0;
     top: 50%;
     z-index: 99;
 
-    .card-feedback {
+    .card-ballon {
         font-family: 'DM Mono';
         // font-weight: 300;
         font-size: 12px;
@@ -129,7 +129,7 @@
         margin-right: -87px;
         transform: rotate(-90deg);
     }
-    .card-feedback:hover {
+    .card-ballon:hover {
         box-shadow: -4px 8px 15px 0px rgba(167, 167, 167, 0.25);
         cursor: pointer;
         background-color: #3FA796;
