@@ -11,7 +11,7 @@
   &:hover {
     background: $blackfont;
     border: 5px solid $secondary;
-    color: white;
+    color: $white;
   }
 }
 
@@ -35,7 +35,7 @@
 .btn-costum-secondary:hover {
   font-family: 'DM Mono';
   background: $secondary !important;
-  color: white;
+  color:$white;
   border-radius: 20px;
   border: none;
 }

@@ -1,0 +1,204 @@
+@import "helpers/responsive.scss";
+@import "base/colors.scss";
+
+.blog {
+    margin-bottom: 100px;
+
+    h3 {
+        font-family: 'DM Mono';
+        color: $blackfont;
+        font-size: 20px;
+        font-weight: 300px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $secondary;
+        max-width: 40%;
+    }
+
+    .textinput-search {
+        border-radius: 50px;
+        padding: 20px !important;
+        height: 50px;
+        background: none;
+        font-family: 'DM Mono';
+    }
+
+    .img-post {
+        object-fit: cover;
+        width: 100% !important;
+        height: 200px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .card-post {
+        /* height: 200px/; */
+        background: $white !important;
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+        .bg-primary {
+            background: none !important;
+            color: $blackfont;
+            border-radius: 0px 0px 20px 20px;
+            margin-top: -1px;
+        }
+
+        &:hover {
+            background: #FE7E6D !important;
+            color: white !important;
+            cursor: pointer;
+            transition: 0.8s;
+
+            h2 {
+                color: white;
+                transition: 0.8s;
+            }
+            span {
+                color: white;
+                transition: 0.8s;
+            }
+            small {
+                color: white;
+                transition: 0.8s;
+            }
+            p {
+                color: white;
+                transition: 0.8s;
+            }
+            .icon {
+                color: white;
+                transition: 0.8s;
+            }
+        }
+
+        h2 {
+            font-family: 'DM Mono';
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        span {
+            font-family: 'DM Mono';
+            font-size: 12px;
+            font-weight: 300px;
+        }
+
+        small {
+            font-family: 'DM Mono';
+            font-size: 11px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .icon {
+            color: $blackfont;
+            margin-right: 5px;
+            margin-top: -2px;
+        }
+    }
+
+    .card-recent-post {
+        margin-bottom: 20px;
+
+        .item-card {
+            cursor: pointer;
+
+            &:hover {
+                h6 {
+                    color: $primary;
+                    transition: 0.8s;
+                }
+                span {
+                    color: $primary;
+                    transition: 0.8s;
+                }
+                small {
+                    color: $primary;
+                    transition: 0.8s;
+                }
+                p {
+                    color: $primary;
+                    transition: 0.8s;
+                }
+               
+            }
+        }
+
+        .img-recentpost {
+            border-radius: 10px !important;
+        }
+
+        small {
+            font-family: 'DM Mono';
+            font-size: 10px;
+            font-weight: 300;
+            color: $blackfont;
+        }
+
+        h6 {
+            font-family: 'DM Mono';
+            font-size: 14px;
+            font-weight: 500;
+            color: $blackfont;
+        }
+
+        p {
+            font-family: 'DM Mono';
+            font-size: 10px;
+            font-weight: 300;
+            color: $blackfont;
+        }
+
+        
+    }
+
+    .card-category-post {
+        ul {
+            font-family: 'DM Mono';
+            font-weight: 300;
+            font-size: 15px;
+            color: $blackfont;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        li:hover {
+            cursor: pointer;
+            color: $secondary;
+            font-weight: 500;
+        }
+
+        .bulet-color {
+            width: 10px;
+            height: 10px;
+            margin-left: -29px;
+            padding: 3px;
+            background-color: #2F3A8F;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            border-radius: 100px;
+            position: absolute;
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+
+    .card-detail-content {
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px;
+
+        h2 {
+            // font-family: 'Roboto';
+            font-size: 24px;
+            font-weight: bolder;
+            color: $blackfont;
+            padding-top: 20px;
+        }
+    }
+}

@@ -166,6 +166,19 @@
     border-radius: 100px;
     position: absolute;
     text-align: center;
+
+    &--small {
+        width: 15px;
+        height: 15px;
+        margin-left: -29px;
+        padding: 3px;
+        background-color: $primary;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        border-radius: 100px;
+        position: absolute;
+        text-align: center;
+        margin-top: 5px;
+    }
 }
 
 .btn-switch-darkmode {
@@ -194,7 +207,7 @@
     height: 5px;
     width: 100%;
     position: fixed;
-    z-index: 50;
+    z-index: 9999;
     top: 0;
 }
 

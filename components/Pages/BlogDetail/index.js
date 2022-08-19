@@ -2,14 +2,14 @@ import SectionCategory from "./parts/SectionCategory";
 import SectionEntry from "./parts/SectionEntry";
 import SectionHero from "./parts/SectionHero";
 
-const ComponentBlog = () => {
+const ComponentBlogDetail = ({ slug }) => {
   return (
     <>
       <SectionHero />
-      <SectionEntry />
+      <SectionEntry slug={slug} />
       {/* <SectionCategory /> */}
     </>
   );
 };
 
-export default ComponentBlog;
+export default ComponentBlogDetail;

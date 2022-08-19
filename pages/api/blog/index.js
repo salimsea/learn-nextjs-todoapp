@@ -34,12 +34,24 @@ export default async function handler(req, res) {
           "s1600"
         )}`;
 
-        var entryShort = item["content"][0]._.replace(
-          /<[^>]*>?/gm,
-          ""
-        ).substring(0, 200);
+        var entryShort = item["content"][0]._.replace(/<[^>]*>?/gm, "")
+          .substring(0, 200)
+          .replace(/\&nbsp;/g, "");
         var entryEnd = entryShort.lastIndexOf(" ");
         var postContent = entryShort.substring(0, entryEnd) + "...";
+
+        entryShort = item["content"][0]._.replace(/<[^>]*>?/gm, "")
+          .substring(0, 100)
+          .replace(/\&nbsp;/g, "");
+        entryEnd = entryShort.lastIndexOf(" ");
+        var postContentSmall = entryShort.substring(0, entryEnd) + "...";
+
+        entryShort = item["title"][0]._.replace(/<[^>]*>?/gm, "").substring(
+          0,
+          50
+        );
+        entryEnd = entryShort.lastIndexOf(" ");
+        var titleSmall = entryShort.substring(0, entryEnd) + "...";
 
         var created = new Date(item["published"]);
         var updated = new Date(item["updated"]);
@@ -49,9 +61,11 @@ export default async function handler(req, res) {
           created: `${created.toLocaleString("en-US")}`,
           updated: `${updated.toLocaleString("en-US")}`,
           title: `${item["title"][0]._}`,
+          titleSmall,
           thumbnail,
           postUrl,
           postContent,
+          postContentSmall,
         });
       }
 

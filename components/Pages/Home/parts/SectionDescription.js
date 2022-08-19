@@ -96,7 +96,7 @@ const SectionDescription = ({ styles }) => {
                 </div>
               </div>
               <p>
-                Hai, my name Salim Segaf Alqosam, I'm from Indonesia and a
+                Hai, my name Salim Segaf Alqosam, I am from Indonesia and a
                 software engineer, I have experience in making mobile
                 applications and websites, I can solve problems in difficulty,
                 have a willingness to learn new technology, and can work with a
@@ -183,7 +183,7 @@ const SectionDescription = ({ styles }) => {
                           <FaArrowRight color="#FFFFFF" size={15} />
                         </div>
                         <p>
-                          2021 - 2022 : (BuildWithAngga) Mr. Angga's mentor,
+                          2021 - 2022 : (BuildWithAngga) Mr. Angga mentor,
                           slicing / Creating a web front-end with the follow
                           SKETCH
                         </p>

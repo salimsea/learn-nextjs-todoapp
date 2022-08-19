@@ -1,66 +1,56 @@
 import React, { useEffect } from "react";
-import { BlogDummy1 } from "assets";
 import Image from "next/image";
 import styles from "styles/Blog.module.scss";
+import { useSelector, useDispatch } from "react-redux";
 import { IoTimeOutline } from "react-icons/io5";
-import { useDispatch, useSelector } from "react-redux";
-import { getDataBlogs } from "redux/action/blogAction";
 import Link from "next/link";
+import { getDataBlog } from "redux/action/blogAction";
 
-const SectionEntry = () => {
-  const { dataBlogs } = useSelector((state) => state.blog);
+const SectionEntry = ({ slug }) => {
+  const { dataBlog, dataBlogs } = useSelector((state) => state.blog);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getDataBlog(slug));
+  // }, [dispatch]);
   return (
     <section className={styles["blog"]}>
       <div className="container">
         <div className="row">
           <div className="col-md-8">
-            <div>
-              <input
-                type="text"
-                placeholder="Enter you keyword..."
-                className={`form-control ${styles["textinput-search"]}`}
-              />
-            </div>
-            <div className="row mt-5">
-              {!dataBlogs.error &&
-                dataBlogs.items?.contents?.map((v, i) => {
-                  return (
-                    <div key={i} className="col-md-6">
-                      <Link href={`blog/${v.slug}`}>
-                        <div className={styles["card-post"]}>
-                          <Image
-                            width={450}
-                            height={250}
-                            src={v.thumbnail}
-                            className={styles["img-post"]}
-                            alt=""
+            <div className={styles["card-detail-content"]}>
+              {!dataBlog.error && (
+                <>
+                  <center>
+                    <h2>{dataBlog.items.item?.title}</h2>
+                    <p>
+                      Published : {dataBlog.items.item?.created} <br />
+                      {dataBlog.items.item?.created !==
+                        dataBlog.items.item?.updated && (
+                        <>
+                          <IoTimeOutline
+                            size={15}
+                            style={{ marginTop: -3, marginRight: 5 }}
                           />
-                          <div
-                            className={`${styles["bg-primary"]} py-3 mx-0 px-4`}
-                          >
-                            <small>
-                              <IoTimeOutline
-                                size={15}
-                                className={styles["icon"]}
-                              />
-                              {v.created}
-                            </small>
-                            <h2>{v.title}</h2>
-                            <p>{v.postContent}</p>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  );
-                })}
+                          Updated : {dataBlog.items.item?.updated}
+                        </>
+                      )}
+                    </p>
+                  </center>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: dataBlog.items.item?.postContent,
+                    }}
+                  />
+                </>
+              )}
             </div>
           </div>
           <div className="col-md-4">
             <div className={styles["card-recent-post"]}>
               <h3>Recent Post</h3>
               <div className="mt-3">
-                {!dataBlogs.error &&
-                  dataBlogs.items?.contents?.map((v, i) => {
+                {!dataBlog.error &&
+                  dataBlog.items?.recentPost?.map((v, i) => {
                     return (
                       i < 5 && (
                         <div key={i} className={`row ${styles["item-card"]}`}>
@@ -75,7 +65,7 @@ const SectionEntry = () => {
                           </div>
                           <div className="col">
                             <small>{v.updated}</small>
-                            <Link href={`blog/${v.slug}`}>
+                            <Link href={`${v.slug}`}>
                               <h6>{v.titleSmall}</h6>
                             </Link>
                             <p>{v.postContentSmall}</p>
