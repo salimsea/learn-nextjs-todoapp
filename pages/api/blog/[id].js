@@ -6,7 +6,9 @@ export default async function handler(req, res) {
   const { id } = req.query;
   try {
     const response = await axios
-      .get("https://salim-tekno.blogspot.com/feeds/posts/default")
+      .get(
+        "https://salim-tekno.blogspot.com/feeds/posts/default?start-index=1&max-results=10000"
+      )
       .then((res) => {
         return res.data;
       })

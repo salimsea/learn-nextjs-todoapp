@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Layout } from "components";
 import ComponentBlog from "components/Pages/Blog";
 import { useEffect } from "react";
@@ -17,15 +18,22 @@ const Blog = (data) => {
     );
   }, []);
   return (
-    <Layout pageTitle="Blog Page">
+    <Layout
+      pageTitle="Blog Page"
+      pageDescription="This page is for sharing knowledge, news about technology and coding"
+    >
       <ComponentBlog />
     </Layout>
   );
 };
 
 export async function getServerSideProps() {
-  const resBlog = await fetch(`${process.env.BASE_URL}/api/blog`);
-  const blog = await resBlog.json();
+  const resBlog = await axios.post(`${process.env.BASE_URL}/api/blog`, {
+    start: "1",
+    max: "1000",
+  });
+
+  const blog = await resBlog.data.data;
 
   return { props: { blog } };
 }
