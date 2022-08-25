@@ -1,3 +1,4 @@
+import { Layout } from "components";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,7 +27,7 @@ const Todo = () => {
     dispatch(postDeleteDataTodo(id, dataTodos));
   };
   return (
-    <div className="container mt-5">
+    <Layout pageTitle="List Data">
       <div className="row">
         <div className="col-md-12">
           <button className="btn btn-success btn-sm" onClick={btnAdd}>
@@ -78,7 +79,7 @@ const Todo = () => {
           </table>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

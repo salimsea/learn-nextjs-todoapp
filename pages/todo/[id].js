@@ -1,3 +1,4 @@
+import { Layout } from "components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
@@ -28,79 +29,73 @@ const Detail = () => {
   };
 
   return (
-    <>
-      <div className="container mt-5">
-        <div className="col-md-12">
-          {!dataTodo.isLoad && (
-            <Form>
-              <FormGroup>
-                <Label for="forId">Id</Label>
-                <Input type="number" name="id" value={id} id="forId" disabled />
+    <Layout pageTitle="Update Data">
+      <div className="col-md-12">
+        {!dataTodo.isLoad && (
+          <Form>
+            <FormGroup>
+              <Label for="forId">Id</Label>
+              <Input type="number" name="id" value={id} id="forId" disabled />
+            </FormGroup>
+            <FormGroup>
+              <Label for="forTitle">Title</Label>
+              <Input
+                type="text"
+                name="title"
+                id="forTitle"
+                placeholder="title placeholder"
+                defaultValue={dataTodo.items.title}
+                onChange={(e) =>
+                  dispatch(
+                    setFormTodo({ name: "title", value: e.target.value })
+                  )
+                }
+              />
+            </FormGroup>
+            <FormGroup tag="fieldset">
+              <legend>Completed</legend>
+              <FormGroup check>
+                <Label check>
+                  <Input
+                    type="radio"
+                    name="radio1"
+                    defaultChecked={dataTodo.items.completed === true}
+                    onChange={(e) =>
+                      dispatch(setFormTodo({ name: "completed", value: true }))
+                    }
+                  />{" "}
+                  <span className="badge bg-success">true</span>
+                </Label>
               </FormGroup>
-              <FormGroup>
-                <Label for="forTitle">Title</Label>
-                <Input
-                  type="text"
-                  name="title"
-                  id="forTitle"
-                  placeholder="title placeholder"
-                  defaultValue={dataTodo.items.title}
-                  onChange={(e) =>
-                    dispatch(
-                      setFormTodo({ name: "title", value: e.target.value })
-                    )
-                  }
-                />
+              <FormGroup check>
+                <Label check>
+                  <Input
+                    type="radio"
+                    name="radio1"
+                    defaultChecked={dataTodo.items.completed === false}
+                    onChange={(e) =>
+                      dispatch(setFormTodo({ name: "completed", value: false }))
+                    }
+                  />{" "}
+                  <span className="badge bg-warning">false</span>
+                </Label>
               </FormGroup>
-              <FormGroup tag="fieldset">
-                <legend>Completed</legend>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="radio1"
-                      defaultChecked={dataTodo.items.completed === true}
-                      onChange={(e) =>
-                        dispatch(
-                          setFormTodo({ name: "completed", value: true })
-                        )
-                      }
-                    />{" "}
-                    <span className="badge bg-success">true</span>
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="radio1"
-                      defaultChecked={dataTodo.items.completed === false}
-                      onChange={(e) =>
-                        dispatch(
-                          setFormTodo({ name: "completed", value: false })
-                        )
-                      }
-                    />{" "}
-                    <span className="badge bg-warning">false</span>
-                  </Label>
-                </FormGroup>
-              </FormGroup>
+            </FormGroup>
 
-              <Link href={"/todo"}>
-                <button className="btn btn-dark me-2">Back</button>
-              </Link>
-              <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => btnUpdate()}
-              >
-                Submit
-              </button>
-            </Form>
-          )}
-        </div>
+            <Link href={"/todo"}>
+              <button className="btn btn-dark me-2">Back</button>
+            </Link>
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={() => btnUpdate()}
+            >
+              Submit
+            </button>
+          </Form>
+        )}
       </div>
-    </>
+    </Layout>
   );
 };
 
