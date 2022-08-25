@@ -25,6 +25,7 @@ const Home = () => {
         <a
           href="https://github.com/salimsea/learn-nextjs-todoapp"
           target="_blank"
+          rel="noreferrer"
         >
           https://github.com/salimsea/learn-nextjs-todoapp
         </a>
