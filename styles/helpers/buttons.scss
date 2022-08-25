@@ -1,41 +1,41 @@
 @import "../base/colors.scss";
 
-.btn-costum-primary-outline {
-  font-family: 'DM Mono';
-  background: $primary;
-  border: 5px solid $secondary;
-  box-sizing: border-box;
-  border-radius: 20px;
-  color: white;
+// .btn-costum-primary-outline {
+//   font-family: 'DM Mono';
+//   background: $primary;
+//   border: 5px solid $secondary;
+//   box-sizing: border-box;
+//   border-radius: 20px;
+//   color: white;
 
-  &:hover {
-    background: $blackfont;
-    border: 5px solid $secondary;
-    color: $white;
-  }
-}
+//   &:hover {
+//     background: $blackfont;
+//     border: 5px solid $secondary;
+//     color: $white;
+//   }
+// }
 
-.btn-primary {
-  background: $secondary !important;
-  color: white;
-  border-radius: 20px;
-  font-size: 11px;
-  font-family: 'DM Mono';
-  border: none;
-}
+// .btn-primary {
+//   background: $secondary !important;
+//   color: white;
+//   border-radius: 20px;
+//   font-size: 11px;
+//   font-family: 'DM Mono';
+//   border: none;
+// }
 
-.btn-costum-secondary {
-  font-family: 'DM Mono';
-  background: $secondary !important;
-  color: white;
-  border-radius: 20px;
-  border: none;
-}
+// .btn-costum-secondary {
+//   font-family: 'DM Mono';
+//   background: $secondary !important;
+//   color: white;
+//   border-radius: 20px;
+//   border: none;
+// }
 
-.btn-costum-secondary:hover {
-  font-family: 'DM Mono';
-  background: $secondary !important;
-  color:$white;
-  border-radius: 20px;
-  border: none;
-}
+// .btn-costum-secondary:hover {
+//   font-family: 'DM Mono';
+//   background: $secondary !important;
+//   color:$white;
+//   border-radius: 20px;
+//   border: none;
+// }

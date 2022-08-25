@@ -1,10 +1,18 @@
 import { Layout } from "components";
-import ComponentHome from "components/Pages/Home";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getDataTodos } from "redux/action/globalAction";
 
 const Home = () => {
+  const { dataTodos } = useSelector((state) => state.global);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDataTodos(dataTodos));
+  }, [dispatch]);
+
   return (
     <Layout pageTitle="Home Page">
-      <ComponentHome />
+      <h1>hai</h1>
     </Layout>
   );
 };

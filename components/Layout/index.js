@@ -1,4 +1,4 @@
-import { Header, Footer, Ballon } from "components";
+import { Header, Footer } from "components";
 import Head from "next/head";
 import React from "react";
 
@@ -11,10 +11,9 @@ const Layout = (props) => {
         <meta name="description" content={`${props?.pageDescription}`} />
       </Head>
       <div>
-        <Ballon />
-        <Header {...props} />
+        {/* <Header {...props} /> */}
         <div>{props.children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

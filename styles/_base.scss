@@ -1,4 +1,4 @@
-@import "_reset.scss";
+// @import "_reset.scss";
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~slick-carousel/slick/slick.scss';
 @import '~slick-carousel/slick/slick-theme.css';
@@ -26,19 +26,19 @@
   --color-black: #000;
 }
 
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  background: $snow;
-    transition: background 0.25s ease-in-out;
-}
+// html,
+// body {
+//   max-width: 100%;
+//   overflow-x: hidden;
+//   background: $snow;
+//     transition: background 0.25s ease-in-out;
+// }
 
-p {
-  font-family: 'DM Mono';
-  font-weight: 300;
-  color: $blackfont;
-  font-size: 14px;
-}
+// p {
+//   font-family: 'DM Mono';
+//   font-weight: 300;
+//   color: $blackfont;
+//   font-size: 14px;
+// }
 
 
