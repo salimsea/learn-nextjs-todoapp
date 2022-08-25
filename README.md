@@ -1,6 +1,6 @@
 ## TodoApp (NextJS + Redux ToolKit)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/204e1f1e-c9e9-4fea-b13e-805405de39c1/deploy-status)](https://app.netlify.com/sites/salimsea/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8177e1ad-37ed-4ed1-ad15-0b588caf969f/deploy-status)](https://app.netlify.com/sites/seal-project7/deploys)
 ![visitors](https://visitor-badge.deta.dev/badge?page_id=learn-nextjs-todoapp.salimsea&left_color=dark&right_color=blue)
 
 ![image](https://user-images.githubusercontent.com/49223890/186594717-bf40868b-dfea-4500-af27-99fca880f7b7.png)
