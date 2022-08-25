@@ -9,7 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/49223890/186594848-26dd12bc-5035-44e9-8d0f-2613cf3986b4.png)
 
-you can see demo here : Open [http://salimseal.com](http://salimseal.com) :)
+you can see demo here : Open [https://seal-project7.netlify.app/](https://seal-project7.netlify.app/) :)
 
 ```bash
 git clone https://github.com/salimsea/learn-nextjs-todoapp.git
